@@ -1,0 +1,3 @@
+# Strings
+
+{{#include ../../../FOOTER.md}}

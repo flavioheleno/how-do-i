@@ -1,0 +1,3 @@
+# Functions
+
+{{#include ../FOOTER.md}}
