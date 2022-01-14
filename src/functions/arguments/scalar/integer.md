@@ -1,0 +1,3 @@
+# Integer
+
+{{#include ../../../FOOTER.md}}
