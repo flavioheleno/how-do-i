@@ -1,0 +1,3 @@
+# Boolean
+
+{{#include ../../../FOOTER.md}}

@@ -1,0 +1,3 @@
+# Constants
+
+{{#include ../FOOTER.md}}

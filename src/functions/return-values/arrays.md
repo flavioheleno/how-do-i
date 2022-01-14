@@ -1,0 +1,3 @@
+# Arrays
+
+{{#include ../../FOOTER.md}}
