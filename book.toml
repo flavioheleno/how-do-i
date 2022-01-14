@@ -1,0 +1,10 @@
+[book]
+authors = ["flavioheleno"]
+language = "en"
+multilingual = false
+src = "src"
+title = "PHP Core: How do I..?"
+
+[output.html]
+git-repository-url = "https://github.com/flavioheleno/how-do-i/tree/main/src"
+edit-url-template = "https://github.com/flavioheleno/how-do-i/edit/main/{path}"

@@ -1,0 +1,3 @@
+# Core
+
+{{#include ../FOOTER.md}}

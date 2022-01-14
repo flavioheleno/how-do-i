@@ -1,0 +1,3 @@
+# Enumerations
+
+{{#include ../../../FOOTER.md}}
