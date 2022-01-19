@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -111,6 +113,9 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/flavioheleno/how-do-i/tree/main/src" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -141,7 +146,6 @@ for developers that are learning, exploring or even contributing to PHP itself.<
 <p>For a more comprehensive and detailed write of how PHP works internally, the best available resource (besides the PHP
 source code itself), is <a href="https://www.phpinternalsbook.com">The PHP Internals Book</a>.</p>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="acknowledgements"><a class="header" href="#acknowledgements">Acknowledgements</a></h1>
 <p>This work is heavily inspired by the amazing content below (in alphabetical order):</p>
 <ul>
@@ -149,82 +153,56 @@ source code itself), is <a href="https://www.phpinternalsbook.com">The PHP Inter
 <li><a href="https://github.com/ThomasWeinert/php-extension-sample">ThomasWeinert/php-extension-sample</a></li>
 </ul>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="constants"><a class="header" href="#constants">Constants</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="arguments"><a class="header" href="#arguments">Arguments</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="scalar-types"><a class="header" href="#scalar-types">Scalar Types</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="boolean"><a class="header" href="#boolean">Boolean</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="integer"><a class="header" href="#integer">Integer</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="floating-point-numbers"><a class="header" href="#floating-point-numbers">Floating point numbers</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="compound-types"><a class="header" href="#compound-types">Compound Types</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="arrays"><a class="header" href="#arrays">Arrays</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="objects"><a class="header" href="#objects">Objects</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="callable"><a class="header" href="#callable">Callable</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="iterable"><a class="header" href="#iterable">Iterable</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="enumerations"><a class="header" href="#enumerations">Enumerations</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="special-cases"><a class="header" href="#special-cases">Special Cases</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="optional-parameters"><a class="header" href="#optional-parameters">Optional Parameters</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="passing-by-reference"><a class="header" href="#passing-by-reference">Passing by Reference</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="default-argument-values"><a class="header" href="#default-argument-values">Default Argument Values</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="variable-length-argument-lists-variadics"><a class="header" href="#variable-length-argument-lists-variadics">Variable-length Argument Lists (Variadics)</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="return-values"><a class="header" href="#return-values">Return Values</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="no-return-value"><a class="header" href="#no-return-value">No Return Value</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="scalar-types-1"><a class="header" href="#scalar-types-1">Scalar Types</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="arrays-1"><a class="header" href="#arrays-1">Arrays</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="objects-1"><a class="header" href="#objects-1">Objects</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="classes"><a class="header" href="#classes">Classes</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class-constants"><a class="header" href="#class-constants">Class Constants</a></h1>
 <p>This chapter covers how to define a class constant.</p>
 <p>Note that more in dept details about constants are covered in the <a href="classes/../constants/index.html">constants</a> chapter.</p>
@@ -322,7 +300,6 @@ zend_string_release(name);
 <p>More about persistent objects in the <a href="https://www.phpinternalsbook.com/php7/memory_management/zend_memory_manager.html">Zend Memory Manager</a> chapter of the PHP Internals Book.</p>
 </div>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class-methods"><a class="header" href="#class-methods">Class Methods</a></h1>
 <p>This chapter covers how to define a class method.</p>
 <p>Note that details such as <a href="classes/../functions/arguments/index.html">method arguments</a> and
@@ -459,7 +436,6 @@ PHP_METHOD(Hdi, sayHello) {
 <li><a href="https://github.com/php/php-src/blob/32e2d97a265a3137eaa642857156e5d49521d846/Zend/zend_API.h#L832">RETURN_STR</a></li>
 </ul>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class-properties"><a class="header" href="#class-properties">Class Properties</a></h1>
 <p>This chapter covers how to define a class property.</p>
 <p>Code sample for this chapter, with additional examples, is available
@@ -591,22 +567,16 @@ zval *value = zend_read_property(
 <li><a href="https://github.com/php/php-src/blob/32e2d97a265a3137eaa642857156e5d49521d846/Zend/zend_API.h#L481">ZEND_THIS</a></li>
 </ul>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class-interface"><a class="header" href="#class-interface">Class Interface</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="implement-an-interface"><a class="header" href="#implement-an-interface">Implement an Interface</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class-inheritance"><a class="header" href="#class-inheritance">Class Inheritance</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="abstract-class"><a class="header" href="#abstract-class">Abstract Class</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="extend-a-class"><a class="header" href="#extend-a-class">Extend a Class</a></h1>
 <hr />
-<p><a href="https://github.com/flavioheleno/how-do-i">Edit on GitHub</a></p>
 
                     </main>
 
@@ -635,7 +605,9 @@ zval *value = zend_read_property(
         <!-- Custom JS scripts -->
         <script type="text/javascript">
         window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
         });
         </script>
     </body>
