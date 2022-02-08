@@ -211,8 +211,35 @@ include and what not to include in the stub file will be outlined.</p>
 </code></pre>
 <h2 id="internal-php-code"><a class="header" href="#internal-php-code">Internal PHP Code</a></h2>
 <p>The following sections show all required code to declare and implement a constant internally in PHP.</p>
-<p>REGISTER_STRING_CONSTANT</p>
-<p>https://github.com/php/php-src/blob/462da6e09c2eb63aeb9ba357c659d490a9bc46d9/Zend/zend_constants.h#L52</p>
+<h3 id="php-stub-hdistubphp"><a class="header" href="#php-stub-hdistubphp">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
+<p>The stub file should not declare global constants as the stub generator script
+(<a href="https://github.com/php/php-src/blob/master/build/gen_stub.php">gen_stub.php</a>) cannot handle it at this moment.</p>
+<h3 id="argument-information-hdi_arginfoh"><a class="header" href="#argument-information-hdi_arginfoh">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
+<p>Constants are not referred to nor registered in the argument information file, so it can be skipped.</p>
+<h3 id="implementation-hdic"><a class="header" href="#implementation-hdic">Implementation (<code>hdi.c</code>)</a></h3>
+<p>The implementation below is very simple and straight forward:</p>
+<ul>
+<li>declaration (<code>REGISTER_MAIN_STRING_CONSTANT</code>)
+<ul>
+<li>name string (<code>&quot;HELLO&quot;</code>)</li>
+<li>value string (<code>&quot;World!&quot;</code>)</li>
+<li>flags (<code>CONST_CS</code> and <code>CONST_PERSISTENT</code>)</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-c">REGISTER_MAIN_STRING_CONSTANT(&quot;HELLO&quot;, &quot;World!&quot;, CONST_CS | CONST_PERSISTENT);
+</code></pre>
+<p>Macros and Functions:</p>
+<ul>
+<li><a href="https://github.com/php/php-src/blob/462da6e09c2eb63aeb9ba357c659d490a9bc46d9/Zend/zend_constants.h#66">REGISTER_MAIN_STRING_CONSTANT</a></li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://github.com/php/php-src/blob/05023a281ddb62186fa47f51192ea51ba10f3a9b/Zend/zend_constants.h">Zend/zend_constants.h</a></li>
+</ul>
+<blockquote>
+<p>Note that constants must be registered during the <strong>MINIT()</strong> stage.</p>
+</blockquote>
 <hr />
 <div style="break-before: page; page-break-before: always;"></div><h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
 <hr />
@@ -268,7 +295,7 @@ include and what not to include in the stub file will be outlined.</p>
 </code></pre>
 <h2 id="internal-php-code-1"><a class="header" href="#internal-php-code-1">Internal PHP Code</a></h2>
 <p>The following sections show all required code to declare a class internally in PHP.</p>
-<h3 id="php-stub-hdistubphp"><a class="header" href="#php-stub-hdistubphp">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
+<h3 id="php-stub-hdistubphp-1"><a class="header" href="#php-stub-hdistubphp-1">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
 <p>The stub file is used to declare the class signature:</p>
 <ul>
 <li>namespace (<code>global</code>)</li>
@@ -276,13 +303,13 @@ include and what not to include in the stub file will be outlined.</p>
 </ul>
 <pre><code class="language-php">class Hdi {}
 </code></pre>
-<h3 id="argument-information-hdi_arginfoh"><a class="header" href="#argument-information-hdi_arginfoh">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
+<h3 id="argument-information-hdi_arginfoh-1"><a class="header" href="#argument-information-hdi_arginfoh-1">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
 <p>This file is generated during compilation, based on the stub file contents.</p>
 <h3 id="header-file-hdih"><a class="header" href="#header-file-hdih">Header File (<code>hdi.h</code>)</a></h3>
 <p>In this file, a pointer to a <code>zend_class_entry</code> must be declared for the defined class:</p>
 <pre><code class="language-h">  extern zend_class_entry *zceHdi;
 </code></pre>
-<h3 id="implementation-hdic"><a class="header" href="#implementation-hdic">Implementation (<code>hdi.c</code>)</a></h3>
+<h3 id="implementation-hdic-1"><a class="header" href="#implementation-hdic-1">Implementation (<code>hdi.c</code>)</a></h3>
 <p>The implementation below is elaborated and each part has its own purpose, as shown below:</p>
 <pre><code class="language-c"></code></pre>
 <hr />
@@ -299,13 +326,12 @@ include and what not to include in the stub file will be outlined.</p>
 </code></pre>
 <h2 id="internal-php-code-2"><a class="header" href="#internal-php-code-2">Internal PHP Code</a></h2>
 <p>The following sections show all required code to declare and implement a class constant internally in PHP.</p>
-<h3 id="php-stub-hdistubphp-1"><a class="header" href="#php-stub-hdistubphp-1">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
+<h3 id="php-stub-hdistubphp-2"><a class="header" href="#php-stub-hdistubphp-2">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
 <p>The stub file should not declare class constants as the stub generator script
 (<a href="https://github.com/php/php-src/blob/master/build/gen_stub.php">gen_stub.php</a>) cannot handle it at this moment.</p>
-<p>Check the issue <a href="https://github.com/php/php-src/issues/XXXX">php/php-src#XXXX</a> for follow up on this.</p>
-<h3 id="argument-information-hdi_arginfoh-1"><a class="header" href="#argument-information-hdi_arginfoh-1">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
+<h3 id="argument-information-hdi_arginfoh-2"><a class="header" href="#argument-information-hdi_arginfoh-2">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
 <p>Class constants are not referred to nor registered in the argument information file, so it can be skipped.</p>
-<h3 id="implementation-hdic-1"><a class="header" href="#implementation-hdic-1">Implementation (<code>hdi.c</code>)</a></h3>
+<h3 id="implementation-hdic-2"><a class="header" href="#implementation-hdic-2">Implementation (<code>hdi.c</code>)</a></h3>
 <p>The implementation below is a little bit more elaborate than what is seen in global scope constant, but it can be broken
 into:</p>
 <ul>
@@ -400,7 +426,7 @@ chapter.</p>
 </code></pre>
 <h2 id="internal-php-code-3"><a class="header" href="#internal-php-code-3">Internal PHP Code</a></h2>
 <p>The following sections show all required code to declare and implement a class method internally in PHP.</p>
-<h3 id="php-stub-hdistubphp-2"><a class="header" href="#php-stub-hdistubphp-2">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
+<h3 id="php-stub-hdistubphp-3"><a class="header" href="#php-stub-hdistubphp-3">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
 <p>The stub file is used to declare the method signature:</p>
 <ul>
 <li>visibility (<code>public</code>)</li>
@@ -412,7 +438,7 @@ chapter.</p>
   public function sayHello(): string {}
 }
 </code></pre>
-<h3 id="argument-information-hdi_arginfoh-2"><a class="header" href="#argument-information-hdi_arginfoh-2">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
+<h3 id="argument-information-hdi_arginfoh-3"><a class="header" href="#argument-information-hdi_arginfoh-3">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
 <p>This file is generated during compilation, based on the stub file contents.</p>
 <p>The argument information header is the standard/default file where all class methods details are defined:</p>
 <ul>
@@ -488,7 +514,7 @@ ZEND_END_ARG_INFO()
 <li><a href="https://github.com/php/php-src/blob/d56ec0a624aa6d5e944795977752edc54c5e3f42/Zend/zend_types.h#L555">IS_NEVER</a></li>
 <li><a href="https://github.com/php/php-src/blob/d56ec0a624aa6d5e944795977752edc54c5e3f42/Zend/zend_types.h#L564">_IS_BOOL</a></li>
 </ul>
-<h3 id="implementation-hdic-2"><a class="header" href="#implementation-hdic-2">Implementation (<code>hdi.c</code>)</a></h3>
+<h3 id="implementation-hdic-3"><a class="header" href="#implementation-hdic-3">Implementation (<code>hdi.c</code>)</a></h3>
 <p>The implementation below is quite simple and straight forward:</p>
 <ul>
 <li>declaration (<code>PHP_METHOD</code>)
@@ -531,13 +557,13 @@ PHP_METHOD(Hdi, sayHello) {
 </code></pre>
 <h2 id="internal-php-code-4"><a class="header" href="#internal-php-code-4">Internal PHP Code</a></h2>
 <p>The following sections show all required code to declare and implement a class property internally in PHP.</p>
-<h3 id="php-stub-hdistubphp-3"><a class="header" href="#php-stub-hdistubphp-3">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
+<h3 id="php-stub-hdistubphp-4"><a class="header" href="#php-stub-hdistubphp-4">PHP Stub (<code>hdi.stub.php</code>)</a></h3>
 <p>The stub file may or may not declare class properties, but the stub generator script
 (<a href="https://github.com/php/php-src/blob/master/build/gen_stub.php">gen_stub.php</a>) will not produce any output related to
 them as they are implementation specific.</p>
-<h3 id="argument-information-hdi_arginfoh-3"><a class="header" href="#argument-information-hdi_arginfoh-3">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
+<h3 id="argument-information-hdi_arginfoh-4"><a class="header" href="#argument-information-hdi_arginfoh-4">Argument Information (<code>hdi_arginfo.h</code>)</a></h3>
 <p>Class properties are not referred to nor registered in the argument information file, so it can be skipped.</p>
-<h3 id="implementation-hdic-3"><a class="header" href="#implementation-hdic-3">Implementation (<code>hdi.c</code>)</a></h3>
+<h3 id="implementation-hdic-4"><a class="header" href="#implementation-hdic-4">Implementation (<code>hdi.c</code>)</a></h3>
 <pre><code class="language-c">zend_string *propName = zend_string_init(&quot;value&quot;, sizeof(&quot;value&quot;) - 1, false);
 zval propDefaultValue;
 /* default property value (undefined) */
