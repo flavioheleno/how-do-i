@@ -26,7 +26,7 @@ jobs:
         run: mdbook build
 
       - name: Publish generated content to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           folder: book
           branch: gh-pages
